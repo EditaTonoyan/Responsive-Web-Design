@@ -1,0 +1,167 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  background-color: rgb(49, 49, 49);
+}
+
+a {
+  text-decoration: none;
+}
+
+.main_header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(46, 4, 145, 0.5);
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: rgb(238, 164, 80);
+  text-transform: uppercase;
+}
+
+.menu_btn {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  display: none;
+}
+
+.menu_btn span {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
+.main_header nav {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.main_header nav p {
+  margin: 0 16px;
+}
+
+.main_header nav p a {
+  color: rgb(238, 164, 80);
+  font-size: 1.25rem;
+  margin-left: 10px;
+}
+
+.main_header nav p a:hover {
+  color: rgb(70, 47, 17);
+}
+
+.side_drawer {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(49, 49, 49);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.side_drawer header {
+  height: 100px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.side_drawer:target {
+  display: block;
+}
+.main_header nav p {
+  margin: 1rem 0;
+}
+.side_drawer nav p a {
+  color: rgb(183, 238, 80);
+  font-size: 2rem;
+}
+
+.side_drawer nav {
+  display: flex;
+  margin: 0;
+  padding: 4rem 1rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+main h1 {
+  text-align: center;
+  color: rgb(238, 164, 80);
+  font-size: 5rem;
+}
+.products {
+  width: 30rem;
+  margin: 50px auto;
+}
+
+.products .main_div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.food_item {
+  background-color: rgb(233, 208, 208);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.food_item img {
+  width: 100%;
+  height: 158px;
+  object-fit: cover;
+}
+
+.food_item_content {
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  max-height: 126px;
+}
+
+.food_item_content h2 {
+  margin: 0 0 14px;
+  /* font-size: 2rem; */
+}
+
+.btn {
+  background-color: rgb(238, 164, 80);
+  color: white;
+  border-radius: 6px;
+  padding: 8px 24px;
+}
+
+.btn:hover {
+  background-color: rgb(177, 138, 10);
+}
+@media (max-width: 48rem) {
+  .products .main_div {
+    grid-template-columns: 100%;
+  }
+  .menu_btn {
+    display: flex;
+  }
+  main h1 {
+    font-size: 2.5rem;
+  }
+  .main_header nav p a {
+    display: none;
+  }
+}
